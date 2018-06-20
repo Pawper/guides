@@ -1,0 +1,109 @@
+Git Bash for Windows - commands
+Syntax: command -options arguments
+Root directory is /
+\ is the escape character - needed for passing spaces, \, etc. as text
+^C                              Get out of trouvble
+^A                              Move to the beginning of line
+^E                              Move to end of line
+^U                              Delete to beginning of line
+Up & down arrows               	Navigate through previous commands
+clear or ^L                     Clear the screen
+exit or ^D                      Exit terminal
+Alt-F2                          New window
+    Linux: Shift-ctrl-t
+Ctrl-shift-tab                  Switch window
+    Linux: Alt+# (tab #)
+(filen...) [tab]                Autocomplete directory/filename
+
+echo <string>                   Print string to screen
+sleep <seconds>                 Sleep for a number of seconds
+help (command)		              Print manual for the command
+  man <command>
+
+dir (filename) /s               Search for filename - wildcards work
+
+file (filename)           			Prints the filetype
+
+pwd			                      	Print working directory
+ls                              List directory contents
+ls -l                           List directory contents (detailed view)
+ls -la			               			List directory contents incl. hidden git files
+ll			                       	List long & list hidden files
+ll |more                  			List long & list hidden files & split into pages (use space to nav & q to quit)
+ll |less                  			List long & list hidden files, navigate with space & use q to quit
+
+cd (directory)                  Change directory
+cd ..                           Change to parent directory
+cd /                            Change to root directory
+cd ~                            Change to home directory
+
+touch (filename)	         			Updates file's last modified/accessed time; if it doesn't exist it creates it
+mkdir                           Create directory
+
+rm                              Remove file
+rm -r                           Remove directory
+rmdir                           Remove empty directory
+
+cp (filename) (path/filename)   Copy file contents to file
+mv (filename) (path/filename)   Move file contents to file, remove original file; also can rename a file
+
+cat (filename)                  List text contents of file
+
+(program name)                  Open program
+(program name) (filename)       Open file in program
+(program name) .                Open this directory in program
+(filename)                      Open file in default program
+
+start .                         Open this directory in Explorer
+start (directory)               Open directory in Explorer
+start (filename) -a (app)	      Open file in app
+atom (filename)                 Open file in Atom
+
+clear                           Clear the terminal screen
+
+git --version				                     	Lists version of Git
+git config --global user.name "(Name)"		Change username
+git config --global user.email "(email)"	Change email
+git config --list                         Lists config details
+git confi user.email	               			Lists config email
+git help				                        	Git help menu
+git help (command)	                 			Git help on a specific command
+git init				                        	Initialize an empty git repo in current working directory
+git branch                                Lists branches
+git branch (branch name)                  Create branch - work on individual branch and test before merging to master
+git branch --delete (branch name)         Delete branch
+git add .			                        		Add all files/changes in working directory to stage
+git add (filename)		                 		Add new or updated file in working to stage
+git commit -m "(message)"		             	Commit stage to repo with message
+git commit -am "(message)"			          Commits all working updates to repo (not renames/removals)
+git log					                        	Lists commit history
+git log --author="(user.name)"	       		Lists commit history of specific user
+git status				                      	Lists branch, untracked (working; not in stage) and tracked (in stage) files
+git diff				                        	Lists differences between working and repo
+git diff --stage		                  		Lists differences between stage and repo
+git rm (filename)		                   		Removes file from working, adds to stage to remove from repo (must commit)
+git mv (filename/path) (filename/path)		Renames file, adds to stage to rename file in repo (must commit); also used for moving
+git checkout (branch name)                Checks out branch to working (use to move between branches)
+git checkout -- (filename)		          	Checks out file from repo to working (like reverting)
+git checkout -b (branch name)             Creates a new branch and switches to it
+git reset HEAD (filename)		             	Removes file from stage
+git checkout (commit #)	-- (filename)	  	Checks out file from a specified commit from repo to working (must commit) (can just type first few digits of commit #)
+git remote add (nickname) (url)		       	Adds a remote repo destination you can push to (e.g., a Github repo; must create it there first; github.com/name/repo)
+git pull                                  Pulls from master
+git push -u (nickname) (branch name)   		Pushes local repo to remote repo
+git push --set-upstream origin (branch)   Sends pull request of branch to origin (github)
+git merge (branch name)                   Merge current branch with specified branch
+git stash                                 Save stage if you need to switch branches
+git clone (remote name/url) (branch name)	Clone remote repo (branch optional) to local repo (login required)
+git rebase                                ????
+git show                                  ????
+
+touch .gitignore                          Creates .gitignore file for git to ignore files (prefs, etc.). try gitignore.io
+          .(directory)	                 	Ignores files in directory
+
+
+vim			                                  text editor - program executed within terminal
+          	i		Enter insert mode at cursor position
+          	[esc]		Exit insert mode
+          	:wq		Rewrite current file & exit VIM
+            :q!   Quit (no save warning)
