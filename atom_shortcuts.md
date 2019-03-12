@@ -31,7 +31,7 @@ Shortcut | Function
 <kbd>ctrl-m</kbd>|jump between beginning & end of brackets  
 <kbd>alt-&uparrow;&downarrow;</kbd>|Block travel
 <kbd>shift-enter</kbd>|Jumpy
-<kbd>ctrl-alt-[]</kdb>|fold/unfold code
+<kbd>ctrl-alt-[]</kbd>|fold/unfold code
 <kbd>ctrl-d</kbd>|select next duplicate  
 <kbd>alt-f3</kbd>|select all duplicates  
 <kbd>ctrl-l</kbd>|select line  (use <kbd>shift-&uparrow;&downarrow;</kbd> to select more)
