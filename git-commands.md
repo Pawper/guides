@@ -2,7 +2,7 @@ git --version				                     	Lists version of Git
 git config --global user.name "(Name)"		Change username
 git config --global user.email "(email)"	Change email
 git config --list                         Lists config details
-git config --global --list                LIsts global config details
+git config --global --list                Lists global config details
 git config user.email	               			Lists config email
 git help				                        	Git help menu
 git help (command)	                 			Git help on a specific command
